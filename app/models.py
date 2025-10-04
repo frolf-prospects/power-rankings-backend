@@ -52,6 +52,7 @@ class Hole(SQLModel, table=True):
     course_id: int = Field(foreign_key="course.id")
     hole_number: int
     par: int
+    length: int
     description: Optional[str] = Field(default=None)
     created_at: datetime = Field(default_factory=datetime.utcnow)
 
@@ -60,6 +61,7 @@ class HoleCreate(SQLModel):
     course_id: int
     hole_number: int
     par: int
+    length: int
     description: Optional[str] = None
 
 
@@ -67,6 +69,7 @@ class HoleUpdate(SQLModel):
     course_id: Optional[int] = None
     hole_number: Optional[int] = None
     par: Optional[int] = None
+    length: Optional[int] = None
     description: Optional[str] = None
 
 

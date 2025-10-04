@@ -3,270 +3,315 @@
         "course_id": 1,
         "hole_number": 1,
         "par": 3,
+        "length": 210,
         "description": "If you mess this one up its going to be a long round"
     },
     {
         "course_id": 1,
         "hole_number": 2,
         "par": 3,
+        "length": 235,
         "description": "OB on the sidewalk to the left that someone always finds somehow"
     },
     {
         "course_id": 1,
         "hole_number": 3,
         "par": 3,
+        "length": 177,
         "description": "The uphill one, nobody likes uphills"
     },
     {
         "course_id": 1,
         "hole_number": 4,
         "par": 3,
+        "length": 269,
         "description": "OB above the wall on the right- someone will always send one a mile to the left"
     },
     {
         "course_id": 1,
         "hole_number": 5,
         "par": 3,
+        "length": 163,
         "description": "Most birdie-able one if you can find a good lay"
     },
     {
         "course_id": 1,
         "hole_number": 6,
         "par": 3,
+        "length": 197,
         "description": "Often where clean par/birdie sheets are broken- nobody likes uphills part 2"
     },
     {
         "course_id": 1,
         "hole_number": 7,
         "par": 3,
+        "length": 207,
         "description": "Someones gotta watch everyone mess it up from the V tree"
     },
     {
         "course_id": 1,
         "hole_number": 8,
         "par": 3,
+        "length": 353,
         "description": "The person who lives in that house must hate us"
     },
     {
         "course_id": 1,
         "hole_number": 9,
         "par": 3,
+        "length": 236,
         "description": "Nice and safe strat (unless there are bees or youre Jaime)"
     },
     {
         "course_id": 2,
         "hole_number": 1,
         "par": 3,
-        "description": "255 ft"
+        "length": 255,
+        "description": ""
     },
     {
         "course_id": 2,
         "hole_number": 2,
         "par": 3,
-        "description": "278 ft"
+        "length": 255,
+        "description": ""
     },
     {
         "course_id": 2,
         "hole_number": 3,
         "par": 3,
-        "description": "286 ft"
+        "length": 286,
+        "description": ""
     },
     {
         "course_id": 2,
         "hole_number": 4,
         "par": 3,
-        "description": "265 ft"
+        "length": 265,
+        "description": ""
     },
     {
         "course_id": 2,
         "hole_number": 5,
         "par": 4,
-        "description": "545 ft"
+        "length": 545,
+        "description": ""
     },
     {
         "course_id": 2,
         "hole_number": 6,
         "par": 3,
-        "description": "260 ft"
+        "length": 260,
+        "description": ""
     },
     {
         "course_id": 2,
         "hole_number": 7,
         "par": 4,
-        "description": "475 ft"
+        "length": 475,
+        "description": ""
     },
     {
         "course_id": 2,
         "hole_number": 8,
         "par": 4,
-        "description": "495 ft"
+        "length": 495,
+        "description": ""
     },
     {
         "course_id": 2,
         "hole_number": 9,
         "par": 3,
-        "description": "303 ft"
+        "length": 303,
+        "description": ""
     },
     {
         "course_id": 2,
         "hole_number": 10,
         "par": 3,
-        "description": "315 ft"
+        "length": 315,
+        "description": ""
     },
     {
         "course_id": 2,
         "hole_number": 11,
         "par": 3,
-        "description": "313 ft"
+        "length": 313,
+        "description": ""
     },
     {
         "course_id": 2,
         "hole_number": 12,
         "par": 4,
-        "description": "545 ft"
+        "length": 545,
+        "description": ""
     },
     {
         "course_id": 2,
         "hole_number": 13,
         "par": 3,
-        "description": "331 ft"
+        "length": 331,
+        "description": ""
     },
     {
         "course_id": 2,
         "hole_number": 14,
         "par": 4,
-        "description": "485 ft"
+        "length": 485,
+        "description": ""
     },
     {
         "course_id": 2,
         "hole_number": 15,
         "par": 3,
-        "description": "254 ft"
+        "length": 254,
+        "description": ""
     },
     {
         "course_id": 2,
         "hole_number": 16,
         "par": 3,
-        "description": "367 ft"
+        "length": 367,
+        "description": ""
     },
     {
         "course_id": 2,
         "hole_number": 17,
         "par": 4,
-        "description": "527 ft"
+        "length": 527,
+        "description": ""
     },
     {
         "course_id": 2,
         "hole_number": 18,
         "par": 3,
-        "description": "360 ft"
+        "length": 360,
+        "description": ""
     },
     {
         "course_id": 3,
         "hole_number": 1,
         "par": 3,
-        "description": "275 ft"
+        "length": 275,
+        "description": ""
     },
     {
         "course_id": 3,
         "hole_number": 2,
         "par": 4,
-        "description": "492 ft"
+        "length": 492,
+        "description": ""
     },
     {
         "course_id": 3,
         "hole_number": 3,
         "par": 3,
-        "description": "450 ft"
+        "length": 450,
+        "description": ""
     },
     {
         "course_id": 3,
         "hole_number": 4,
         "par": 3,
-        "description": "319 ft"
+        "length": 319,
+        "description": ""
     },
     {
         "course_id": 3,
         "hole_number": 5,
         "par": 4,
-        "description": "208 ft"
+        "length": 208,
+        "description": ""
     },
     {
         "course_id": 3,
         "hole_number": 6,
         "par": 3,
-        "description": "359 ft"
+        "length": 359,
+        "description": ""
     },
     {
         "course_id": 3,
         "hole_number": 7,
         "par": 3,
-        "description": "305 ft"
+        "length": 305,
+        "description": ""
     },
     {
         "course_id": 3,
         "hole_number": 8,
         "par": 3,
-        "description": "185 ft"
+        "length": 185,
+        "description": ""
     },
     {
         "course_id": 3,
         "hole_number": 9,
         "par": 3,
-        "description": "275 ft"
+        "length": 275,
+        "description": ""
     },
     {
         "course_id": 3,
         "hole_number": 10,
         "par": 4,
-        "description": "476 ft"
+        "length": 476,
+        "description": ""
     },
     {
         "course_id": 3,
         "hole_number": 11,
         "par": 5,
-        "description": "583 ft"
+        "length": 583,
+        "description": ""
     },
     {
         "course_id": 3,
         "hole_number": 12,
         "par": 4,
-        "description": "501 ft"
+        "length": 501,
+        "description": ""
     },
     {
         "course_id": 3,
         "hole_number": 13,
         "par": 3,
-        "description": "197 ft"
+        "length": 197,
+        "description": ""
     },
     {
         "course_id": 3,
         "hole_number": 14,
         "par": 4,
-        "description": "478 ft"
+        "length": 478,
+        "description": ""
     },
     {
         "course_id": 3,
         "hole_number": 15,
         "par": 4,
-        "description": "485 ft"
+        "length": 485,
+        "description": ""
     },
     {
         "course_id": 3,
         "hole_number": 16,
         "par": 4,
-        "description": "424 ft"
+        "length": 424,
+        "description": ""
     },
     {
         "course_id": 3,
         "hole_number": 17,
         "par": 3,
-        "description": "336 ft"
+        "length": 336,
+        "description": ""
     },
     {
         "course_id": 3,
         "hole_number": 18,
         "par": 4,
-        "description": "515 ft"
+        "length": 515,
+        "description": ""
     }
 ]
