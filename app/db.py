@@ -15,8 +15,6 @@ engine = create_engine(settings.database_url, echo=False, connect_args=connect_a
 
 
 def create_db_and_tables() -> None:
-    # Drop all tables first to handle schema changes
-    SQLModel.metadata.drop_all(engine)
     # Create all tables with new schema
     SQLModel.metadata.create_all(engine)
 
