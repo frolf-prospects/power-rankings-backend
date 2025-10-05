@@ -11,6 +11,11 @@ def on_startup() -> None:
     seed_database()
 
 
+@app.get("/health")
+def root_health() -> dict:
+    return {"status": "ok"}
+
+
 app.include_router(api_router)
 
 
