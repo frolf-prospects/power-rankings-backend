@@ -11,7 +11,8 @@ from ..models import (
     Course, CourseCreate, CourseUpdate,
     Hole, HoleCreate, HoleUpdate,
     Game, GameCreate, GameUpdate,
-    Score, ScoreCreate, ScoreUpdate
+    Score, ScoreCreate, ScoreUpdate,
+    ScoresBatchCreate, CourseWithHolesCreate
 )
 
 
@@ -353,5 +354,76 @@ def delete_score(score_id: int, session: Session = Depends(get_db_session)) -> d
     session.delete(score)
     session.commit()
     return {"message": "Score deleted successfully"}
+
+
+# Batch operation endpoints
+@api_router.post("/scores_batch", response_model=List[Score])
+def create_scores_batch(scores_batch: ScoresBatchCreate, session: Session = Depends(get_db_session)) -> List[Score]:
+    """Create multiple scores in a single request"""
+    created_scores = []
+    
+    for score_data in scores_batch.scores:
+        # Validate foreign keys exist
+        game = session.get(Game, score_data.game_id)
+        if not game:
+            raise HTTPException(status_code=404, detail=f"Game with ID {score_data.game_id} not found")
+        
+        hole = session.get(Hole, score_data.hole_id)
+        if not hole:
+            raise HTTPException(status_code=404, detail=f"Hole with ID {score_data.hole_id} not found")
+        
+        player = session.get(Player, score_data.player_id)
+        if not player:
+            raise HTTPException(status_code=404, detail=f"Player with ID {score_data.player_id} not found")
+        
+        db_score = Score.model_validate(score_data)
+        session.add(db_score)
+        created_scores.append(db_score)
+    
+    session.commit()
+    
+    # Refresh all created scores to get their IDs
+    for score in created_scores:
+        session.refresh(score)
+    
+    return created_scores
+
+
+@api_router.post("/create_course_with_holes", response_model=dict)
+def create_course_with_holes(course_data: CourseWithHolesCreate, session: Session = Depends(get_db_session)) -> dict:
+    """Create a course and all its holes in a single request"""
+    # Create the course
+    course = Course(
+        name=course_data.name,
+        location=course_data.location,
+        description=course_data.description
+    )
+    session.add(course)
+    session.commit()
+    session.refresh(course)
+    
+    # Create all holes for the course
+    created_holes = []
+    for hole_data in course_data.holes:
+        hole = Hole(
+            course_id=course.id,
+            hole_number=hole_data.hole_number,
+            par=hole_data.par,
+            description=hole_data.description
+        )
+        session.add(hole)
+        created_holes.append(hole)
+    
+    session.commit()
+    
+    # Refresh all created holes to get their IDs
+    for hole in created_holes:
+        session.refresh(hole)
+    
+    return {
+        "course": course,
+        "holes": created_holes,
+        "message": f"Created course '{course.name}' with {len(created_holes)} holes"
+    }
 
 

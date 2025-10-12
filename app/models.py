@@ -30,14 +30,14 @@ class PlayerUpdate(SQLModel):
 class Course(SQLModel, table=True):
     id: Optional[int] = Field(default=None, primary_key=True)
     name: str
-    location: str
+    location: Optional[str] = None
     description: str
     created_at: datetime = Field(default_factory=datetime.utcnow)
 
 
 class CourseCreate(SQLModel):
     name: str
-    location: str
+    location: Optional[str] = None
     description: str
 
 
@@ -52,7 +52,7 @@ class Hole(SQLModel, table=True):
     course_id: int = Field(foreign_key="course.id")
     hole_number: int
     par: int
-    length: int
+    length: Optional[int] = None
     description: Optional[str] = Field(default=None)
     created_at: datetime = Field(default_factory=datetime.utcnow)
 
@@ -61,7 +61,7 @@ class HoleCreate(SQLModel):
     course_id: int
     hole_number: int
     par: int
-    length: int
+    length: Optional[int] = None
     description: Optional[str] = None
 
 
@@ -111,3 +111,23 @@ class ScoreUpdate(SQLModel):
     hole_id: Optional[int] = None
     player_id: Optional[int] = None
     score: Optional[int] = None
+
+
+# Batch operation models
+class ScoresBatchCreate(SQLModel):
+    scores: List[ScoreCreate]
+
+
+class HoleData(SQLModel):
+    hole_number: int
+    par: int
+    description: Optional[str] = None
+
+
+class CourseWithHolesCreate(SQLModel):
+    name: str
+    location: str
+    description: str
+    holes: List[HoleData]
+
+
