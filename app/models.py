@@ -121,6 +121,7 @@ class ScoresBatchCreate(SQLModel):
 class HoleData(SQLModel):
     hole_number: int
     par: int
+    length: Optional[int] = None
     description: Optional[str] = None
 
 
